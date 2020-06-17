@@ -24,4 +24,4 @@ class SummarizeText(Resource):
 api.add_resource(SummarizeText, "/")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

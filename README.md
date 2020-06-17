@@ -4,7 +4,7 @@ This package comes in two parts:
 
 ## How it works
 
-When started, the HTTP server loads a pretrained spaCy model that tokenizes documents sent via POST requests. The sentences in the document are ranked by the weighted frequencies of their constituent words. (This is similar to tf-idf but is limited to one document.) A summary is then assembled from the most important sentences and is returned as JSON object.
+When started, the HTTP server loads a pretrained spaCy model that tokenizes documents sent via POST requests. The sentences in the document are ranked by the weighted frequencies of their constituent words. (This is similar to tf-idf but is limited to one document.) A summary is then assembled from the most important sentences and is returned as a JSON object.
 
 ## Requirements
 
