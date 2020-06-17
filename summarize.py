@@ -5,8 +5,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 def summarize(doc, pct_sentences, min_tokens):
     """
-    Summarize a document by collecting the most important sentences, as 
-    ranked by tf-idf.
+    Summarize a document by collecting the most important sentences.
+    Sentences are ranked based on the weighted frequency of their 
+    constituent tokens (words).
     
     Parameters
     ----------
