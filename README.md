@@ -17,7 +17,7 @@ This package has the following dependencies:
 Additionally, you'll need to download the pretrained spaCy model within a shell session:
 
 ```bash
-python -m spacy download en_core_web_sm
+$ python -m spacy download en_core_web_sm
 ```
 
 Presently, only the English language is supported.
@@ -27,10 +27,10 @@ Presently, only the English language is supported.
 In a shell session, run `python api.py` to start up a local HTTP server, i.e., 127.0.0.1:5000. You may then send POST requests. The server expects three parameters, all of which are required:
 - `"text"`, a Unicode string that contains the (preprocessed) document you wish to summarize;
 - `"pct_sentences"`, the percentage of top sentences to include in the summary; and
-- `"min_tokens"`, the minimum number of tokens that a sentence must contain for inclusion.
+- `"min_tokens"`, the minimum number of tokens that a sentence must contain for inclusion in the summary.
 
-The server returns a JSON object with a single key `"summary"`, whose value is an array of the most highly ranked sentences.
+The server returns a JSON object with a single key, `"summary"`, whose value is an array of the most highly ranked sentences.
 
 ## Acknowledgements
 
-The summarization algorithm was forked from Lu&iacute;s Fred's `extractive-text-summarization` repository ([link](https://github.com/luisfredgs/extractive-text-summarization)).
+The extractive text summarization algorithm was forked from Lu&iacute;s Fred's `extractive-text-summarization` repository ([link](https://github.com/luisfredgs/extractive-text-summarization)).

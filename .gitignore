@@ -1,5 +1,3 @@
 __pycache__/
-.gitignore
-README.md
 test_api.py
 test.txt
