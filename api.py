@@ -12,9 +12,9 @@ class SummarizeText(Resource):
         self.parser = reqparse.RequestParser()
         self.parser.add_argument("text", required=True)
         self.parser.add_argument("pct_sentences", required=True, type=float)
-        self.parser.add_argument("min_tokens", required=True, type=int)        
+        self.parser.add_argument("min_tokens", required=True, type=int)
         super(SummarizeText, self).__init__()
-    
+
     def post(self):
         args = self.parser.parse_args()
         doc = nlp(args.text)
@@ -24,4 +24,4 @@ class SummarizeText(Resource):
 api.add_resource(SummarizeText, "/")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")

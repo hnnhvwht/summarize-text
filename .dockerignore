@@ -1,0 +1,7 @@
+.dockerignore
+.git
+.gitignore
+__pycache__/
+README.md
+test_api.py
+test.txt
