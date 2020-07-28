@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: summarize-pod
+  labels:
+    app: summarize-text
+spec:
+  containers:
+  - name: summarize-ctr
+    image: hnnhvwht/summarize-text:latest
+    ports:
+    - containerPort: 5000

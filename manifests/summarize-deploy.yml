@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: summarize-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: summarize-text
+  minReadySeconds: 20
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: summarize-text
+    spec:
+      containers:
+      - name: summarize-ctr
+        image: hnnhvwht/summarize-text:latest
+        ports:
+        - containerPort: 5000
