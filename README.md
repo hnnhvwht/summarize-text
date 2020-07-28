@@ -31,18 +31,18 @@ In a shell session, run `python api.py` to start up a local HTTP server. You may
 
 The server returns a JSON object with a single key, `"summary"`, whose value is an array of the most highly ranked sentences.
 
-Alternatively, you can use the included Dockerfile to build a docker image:
+Alternatively, you can use the included Dockerfile to build a Docker Image:
 
 ```bash
-$ docker image build -t summarize:latest .
+$ docker image build -t summarize-text:latest .
 ```
 Then, run the container like so:
 
 ```bash
-$ docker run -p 5000:5000 summarize:latest
+$ docker run -p 5000:5000 summarize-text:latest
 ```
 
-This way, you don't have to worry about installing any of the dependencies. Unfortunately, the image takes up a whopping 1.22 GB as it uses the base `python:3` image (934 MB). In the future, I plan to rewrite the Dockerfile to use the more lightweight `python:3-alpine` image (80 MB).
+This way, you don't have to worry about installing any of the dependencies. Presently, the Image uses the python:3.7-slim image and takes up 445 M.
 
 ## Acknowledgements
 
